@@ -81,10 +81,10 @@ class chemReactNumber(Frame):
         inputFrame = Frame(frame, bg="white")
         textField1 = Frame(inputFrame, bg="white")
         textField2 = Frame(inputFrame, bg="white")
-        Label(textField1, text="Number of Species:", bg="white").grid(sticky='nesw', row=0)
+        Label(textField1, text="Número de pareja enantioméricas:", bg="white").grid(sticky='nesw', row=0)
         self.numberSpecies = Entry(textField1)
         self.numberSpecies.grid(sticky='nesw', row=1)
-        Label(textField2, text="Number of Chem reactions:", bg="white").grid(row=2)
+        Label(textField2, text="Number de reacciones:", bg="white").grid(row=2)
         self.numberChemReact = Entry(textField2)
         self.numberChemReact.grid(row=3, sticky='nesw')
         frame.columnconfigure(0, weight=1)
@@ -96,7 +96,7 @@ class chemReactNumber(Frame):
         if (self.noSpeciesStep2 != int(self.numberSpecies.get())):
             self.noSpeciesStep2 = int(self.numberSpecies.get())
             frame.grid()
-            Label(frame, text="Species names", bg="white").grid(row=0, pady=8)
+            Label(frame, text="Nombre de especies", bg="white").grid(row=0, pady=8)
             frameSpecies = Frame(frame, bg="white")
             rowSpecie = 1
             for noSpecie in range(self.noSpeciesStep2):
@@ -118,7 +118,7 @@ class chemReactNumber(Frame):
                 self.noChemReacts != int(self.numberChemReact.get())):
             self.noSpeciesStep3 = int(self.numberSpecies.get())
             self.noChemReacts = int(self.numberChemReact.get())
-            Label(frame, text="Reactions", bg="white").grid(pady=8, row=0)
+            Label(frame, text="Reacciones", bg="white").grid(pady=8, row=0)
             reactionsFrame = Frame(frame, bg="white")
 
             for noSpecie in range(self.noSpeciesStep3):
@@ -126,7 +126,7 @@ class chemReactNumber(Frame):
                     row=0, column=noSpecie)
 
             for noSpecie in range(self.noSpeciesStep3):
-                Label(reactionsFrame, text="R %s" % self.speciesReact[noSpecie].get(),bg="white").grid(
+                Label(reactionsFrame, text="D %s" % self.speciesReact[noSpecie].get(),bg="white").grid(
                     row=0, column=(self.noSpeciesStep3 + noSpecie))
 
             Label(reactionsFrame, text="==>", bg="white").grid(row=0, column=(self.noSpeciesStep3 * 2))
@@ -136,19 +136,19 @@ class chemReactNumber(Frame):
                     row=0, column=(noSpecie + (self.noSpeciesStep3 * 2) + 1))
 
             for noSpecie in range(self.noSpeciesStep3):
-                Label(reactionsFrame, text="R %s" % self.speciesReact[noSpecie].get(), bg="white").grid(
+                Label(reactionsFrame, text="D %s" % self.speciesReact[noSpecie].get(), bg="white").grid(
                     row=0, column=(noSpecie + self.noSpeciesStep3 + (self.noSpeciesStep3 * 2) + 1))
 
             for noChemReact in range(self.noChemReacts):
                 self.chemReact.append([]);
                 for noSpecie in range(self.noSpeciesStep3 * 2):
-                    self.chemReact[noChemReact].append(Entry(reactionsFrame, width=5))
+                    self.chemReact[noChemReact].append(Entry(reactionsFrame, width=5,textvariable= StringVar(root, value='0')))
                     self.chemReact[noChemReact][noSpecie].grid(
                         row=noChemReact + 1, column=noSpecie, padx=5, pady=5)
 
             for noChemReact in range(self.noChemReacts):
                 for noSpecie in range(self.noSpeciesStep3 * 2):
-                    self.chemReact[noChemReact].append(Entry(reactionsFrame, width=5))
+                    self.chemReact[noChemReact].append(Entry(reactionsFrame, width=5,textvariable= StringVar(root, value='0')))
                     self.chemReact[noChemReact][noSpecie + (self.noSpeciesStep3 * 2)].grid(
                         row=(noChemReact) + 1, column=(noSpecie + (self.noSpeciesStep3 * 2)) + 1, padx=5, pady=5)
 
