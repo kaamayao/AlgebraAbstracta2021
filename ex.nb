@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      1447,         48]
-NotebookOptionsPosition[      1005,         33]
-NotebookOutlinePosition[      1406,         49]
-CellTagsIndexPosition[      1363,         46]
+NotebookDataLength[      2164,         67]
+NotebookOptionsPosition[      1595,         49]
+NotebookOutlinePosition[      1996,         65]
+CellTagsIndexPosition[      1953,         62]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -24,15 +24,31 @@ Cell[BoxData[
    RowBox[{"StartExternalSession", "[", "\"\<Python\>\"", "]"}]}], 
   ";"}]], "Input",
  CellChangeTimes->{{3.830525815913726*^9, 3.830525831717272*^9}},
- CellLabel->"In[1]:=",ExpressionUUID->"d2502aae-c5e8-4630-b1d9-088bf79c5ad8"],
+ CellLabel->"In[7]:=",ExpressionUUID->"d2502aae-c5e8-4630-b1d9-088bf79c5ad8"],
 
-Cell[BoxData["\[IndentingNewLine]"], "Input",
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"matrixReact", " ", "=", " ", 
+  RowBox[{"ExternalEvaluate", "[", 
+   RowBox[{"session", ",", 
+    RowBox[{
+    "File", "[", "\"\</home/kevin/git/AlgebraAbstracta2021/main.py\>\"", 
+     "]"}]}], "]"}]}]], "Input",
  CellChangeTimes->{
-  3.8305258460199423`*^9},ExpressionUUID->"d4a07d14-ac54-41ec-b099-\
-e209095eeed9"]
+  3.8305258460199423`*^9, {3.830637729050177*^9, 3.8306377536593657`*^9}, 
+   3.8306379258946857`*^9},
+ CellLabel->"In[9]:=",ExpressionUUID->"d4a07d14-ac54-41ec-b099-e209095eeed9"],
+
+Cell[BoxData[
+ RowBox[{"{", "}"}]], "Output",
+ CellChangeTimes->{{3.8306378523156557`*^9, 3.830637858440381*^9}, {
+   3.8306378884594812`*^9, 3.830637905655127*^9}, 3.83063794008668*^9},
+ CellLabel->"Out[9]=",ExpressionUUID->"f2057182-9ef1-4aba-aef0-c40961d32b38"]
+}, Open  ]]
 },
 WindowSize->{606., 658.5},
-WindowMargins->{{657, Automatic}, {54.75, Automatic}},
+WindowMargins->{{328.5, Automatic}, {-30, Automatic}},
 FrontEndVersion->"12.2 for Linux x86 (64-bit) (December 12, 2020)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"1551ac72-ffe8-466c-88a7-4e9db50fa581"
@@ -49,10 +65,11 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[558, 20, 291, 6, 29, "Input",ExpressionUUID->"d2502aae-c5e8-4630-b1d9-088bf79c5ad8"],
-Cell[852, 28, 149, 3, 51, "Input",ExpressionUUID->"d4a07d14-ac54-41ec-b099-e209095eeed9"]
+Cell[CellGroupData[{
+Cell[874, 30, 438, 10, 51, "Input",ExpressionUUID->"d4a07d14-ac54-41ec-b099-e209095eeed9"],
+Cell[1315, 42, 264, 4, 56, "Output",ExpressionUUID->"f2057182-9ef1-4aba-aef0-c40961d32b38"]
+}, Open  ]]
 }
 ]
 *)
-
-(* End of internal cache information *)
 
