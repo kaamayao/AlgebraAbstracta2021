@@ -157,13 +157,29 @@ class chemReactNumber(Frame):
             frame.columnconfigure(0, weight=1)
 
     def makeChemEqMatrix(self):
+        matrixReact2=[]
         for i in range(len(self.chemReact)):
             matrixReact.append([])
+            matrixReact2.append([])
             for j in range(len(self.chemReact[i])):
                 matrixReact[i].append(self.chemReact[i][j].get())
-        n=len(matrixReact)
-        for k in range(n):
-            matrixReact.append(matrixReact[k])
+                matrixReact2[i].append(0)
+        p=len(matrixReact)
+
+        for f in range(p):
+            for k in range(self.noSpeciesStep2):
+                n=matrixReact[f][k]
+                m=matrixReact[f][k+self.noSpeciesStep2]
+                matrixReact2[f][k+self.noSpeciesStep2]=n
+                matrixReact2[f][k]=m
+
+                n2 = matrixReact[f][k+self.noSpeciesStep2*2]
+                m2 = matrixReact[f][k + (self.noSpeciesStep2*2)+self.noSpeciesStep2]
+                matrixReact2[f][k + (self.noSpeciesStep2*2)+self.noSpeciesStep2] = n2
+                matrixReact2[f][k+self.noSpeciesStep2*2] = m2
+        matrixReact.extend(matrixReact2)
+        #print(matrixReact)
+
 
 root = Tk()
 root.minsize(600, 250)
